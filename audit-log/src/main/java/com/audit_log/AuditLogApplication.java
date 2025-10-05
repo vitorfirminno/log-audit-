@@ -1,5 +1,6 @@
 package com.audit_log;
 
+import com.audit_log.config.DataBaseConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -7,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AuditLogApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(AuditLogApplication.class, args);
 	}
 
