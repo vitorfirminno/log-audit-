@@ -10,4 +10,5 @@ class AuditLogApplicationTests {
 	void contextLoads() {
 	}
 
+
 }

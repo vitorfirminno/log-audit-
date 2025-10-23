@@ -3,18 +3,20 @@ package com.audit_log.repository;
 import com.audit_log.model.User;
 
 import java.util.List;
+import java.util.Optional;
 
-public interface Repository {
+public interface Repository<T> {
 
-    <T> T getById(Long id, Class<T> type );
-   // User getByEmail(String email);
+    Optional<T> findById(Long id);
 
-    <T> List<T> getAll(Class<T> type);
+    List<T> findAll();
 
-    <T> T update(Class<T> type);
+    void save(T t);
 
-    <T> boolean delete(Class<T> type);
+    void update(Long id,T t);
 
-    <T> T create(Class<T> type);
+    void deleteById(Long id);
+
+    List<T> findPaged(int pagina, int tamanho);
 
 }
